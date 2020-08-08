@@ -1,0 +1,257 @@
+/*Global*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Nunito", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+.section-heading {
+  font-size: 5rem;
+  text-align: center;
+  padding: 4rem 0;
+  color: #fff;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+/*End Global*/
+/*Header*/
+.header {
+  padding: 1rem 10rem;
+  background-color: #fff;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  position: relative;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: 0 0px 1px #000;
+  position: fixed;
+  z-index: 100;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+.nav-item {
+  padding: 1rem;
+  margin-left: 1.5rem;
+}
+.nav-item:hover,
+.nav-link:hover {
+  background-color: #333;
+  color: #fff;
+}
+.nav-link {
+  color: #000;
+}
+/*End Header*/
+/*Container Info */
+.container-info {
+  width: 100%;
+  height: 90vh;
+  background: url(../images/pexels-amin-imanifar-865773.jpg) no-repeat center
+    top/cover;
+  display: flex;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  text-shadow: 0 0px 1px #000;
+}
+.info-wrapper {
+  height: 100vh;
+  margin-left: 12rem;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info-heading {
+  font-size: 6rem;
+  animation: moveToLeft 2s;
+}
+span {
+  color: #46a29f;
+}
+.info-subheading {
+  font-style: italic;
+  font-size: 4.5rem;
+  text-align: right;
+  animation: moveToRight 2s;
+}
+
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes moveToRight {
+  0% {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/*End Container Info */
+
+/*Section About Me*/
+.section-aboutme {
+  background-color: #fff;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section-aboutme h1 {
+  color: #333;
+}
+.section-paragraph {
+  text-align: center;
+  font-size: 2.2rem;
+}
+.social-media-link i {
+  color: #333;
+  font-size: 5rem;
+  padding: 6rem 2rem;
+  transition: transform 0.3s;
+}
+.social-media-link i:hover {
+  transform: translateY(20px);
+}
+/*End section About me*/
+
+/*Section Projects*/
+.section-projects {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0;
+  background-color: #46a29f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-wrapper {
+  padding: 1rem;
+  width: 80%;
+  background-color: #46a29f;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.project-img {
+  width: 100%;
+  transition: opacity 0.4s;
+}
+.project:hover .project-img {
+  opacity: 0.2;
+}
+.project {
+  height: 240px;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  background-color: #fff;
+  box-shadow: 0.3rem 0.3rem 0.5rem #777;
+  position: relative;
+  transition: top 0.4s, box-shadow 0.4s;
+  overflow: hidden;
+}
+.project:hover {
+  box-shadow: 1rem 1rem 1rem #777;
+}
+.project:hover .project-text {
+  top: 8rem;
+}
+.project:hover .project-link {
+  bottom: 8rem;
+}
+.project-text {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: capitalize;
+  position: absolute;
+  top: -10rem;
+}
+.project-link {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  letter-spacing: 0.1rem;
+  border: 0.3rem solid #89faf2;
+  padding: 0 1rem;
+  background-color: #fff;
+  position: absolute;
+  bottom: -5rem;
+  transition: bottom 0.4s;
+}
+
+/*End Section Projects*/
+/*Footer*/
+footer {
+  background-color: rgb(29, 29, 29);
+  width: 100%;
+  height: auto;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+.list-footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+footer li {
+  margin-top: 1rem;
+}
+footer p {
+  color: #999;
+}
+/*End Footer*/
+/*Media Querys*/
+@media (max-width: 700px) {
+  .nav-heading {
+    display: none;
+  }
+  .info-subheading {
+    text-align: left;
+  }
+  .container-info {
+    background: url(../images/pexels-amin-imanifar-865773.jpg) no-repeat center
+      right/cover;
+  }
+  .projects-wrapper {
+    flex-direction: column;
+  }
+}
+/*End Media Querys*/
